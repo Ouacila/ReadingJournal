@@ -15,11 +15,12 @@ if(isset($_POST['validate'])){
         $resume = nl2br(htmlspecialchars($_POST['resume'])); // on autorise les sauts de ligne avec nl2br;
         $date_publication = date('d/m/Y');
 
-        $insertBook = $bdd->prepare('INSERT INTO Books(pseudo,title, auteur, maisonE, resume, photo, date_publication) VALUES (?,?,?,?,?,?,?)');
+        $insertBook = $bdd->prepare('INSERT INTO Books(pseudo,title, id_profil, auteur, maisonE, resume, photo, date_publication) VALUES (?,?,?,?,?,?,?,?)');
         $insertBook->execute(
             array(
                 $pseudo, 
                 $title, 
+                $id_profil,
                 $auteur, 
                 $maisonE, 
                 $resume, 
@@ -29,6 +30,7 @@ if(isset($_POST['validate'])){
         );
 
         $successMsg = "Le livre a bien été ajouté";
+        header('Location: indexPerso.php');
 
     }else{
         $errorMsg = "Veuillez renseigner tous les champs . . . ";
