@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
-require ('actions/books/myBooks_actions.php');
 require ('actions/users/security_action.php');
+require ('actions/books/myBooks_actions.php');
 
 ?>
 <html lang="en">
@@ -21,6 +21,9 @@ require ('actions/users/security_action.php');
         <ul class="">
             <li class="">
                 <a class="nav-link" href="addBook.php">Ajouter un livre</a><br>
+            </li>
+            <li class="">
+                <a class="nav-link" href="./AllBooks.php">Tous les livres</a><br>
             </li>
             <li>
                 <a class="nav-link" href="./actions/users/tracker.php">Mon tracker de lectures finies</a><br>
@@ -52,10 +55,13 @@ require ('actions/users/security_action.php');
             <li>
                 <a class="nav-link" href="./actions/users/auteur.php">Auteur/trice préférée</a><br>
             </li>
+            <li>
+                <a class="nav-link" href="actions/users/logout_action.php">Se déconnecter</a><br>
+            </li>
         </ul>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-4 g-6">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
         <?php
             while($books = $getAllMyBooks->fetch()){     
         ?>
@@ -79,9 +85,9 @@ require ('actions/users/security_action.php');
                         ?>
                     </p>
                     <div class="buttons">
-                        <a href="#" class="btn btn-success">Modifier</a>
-                        <a href="#" class="btn btn-primary">Détails</a>
-                        <a href="#" class="btn btn-danger">Supprimer</a>
+                        <a href="./edit_book.php?id_book=<?= $books['id_book']; ?>" class="btn btn-success">Modifier</a>
+                        <a href="./oneBook.php?id_book=<?=$books['id_book']; ?>" class="btn btn-primary">Détails</a>
+                        <a href="actions/books/deleteBook_action.php?id_book=<?= $books['id_book']; ?>"" class="btn btn-danger">Supprimer</a>
                     </div>
                 </div>
             </div>
@@ -109,6 +115,7 @@ require ('actions/users/security_action.php');
             z-index: 1;
         }
     .LiensPagePerso{
+        margin-right: 5%;
         float:left;
         width: 12%;
     }

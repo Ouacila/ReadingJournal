@@ -1,10 +1,9 @@
-
 <header>
 </header>
 <body>
     <ul>
     <?php
-            for($x = 1; $x <= 90; $x++){    
+            for($x = 90; $x <= 180; $x++){    
             ?>
                 <li>
                     <input type="checkbox" class="check" id="check_<?= $x ?>" value="check_<?= $x ?>">
@@ -15,7 +14,6 @@
         ?>
     
     </ul>
-    <a href="./trackerP2.php" class="next">Page suivante ➡️➡️➡️</a> 
     <a href="../../indexPerso.php" class="retour">⬅️⬅️⬅️ Retour</a> 
 </body>
 
@@ -78,13 +76,9 @@
             font-weight: bold;
             
         }
-        .next{
+        .retour{
             float: right;
             margin-right:100px;
-            font-size: 1.5rem;
-            color: #7c6d51;
-        }
-        .retour{
             font-size: 1.5rem;
             color: #7c6d51;
         }

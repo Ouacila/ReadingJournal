@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 //ce fichier est l'égal du models  pour du mvc : chargé de récupérer des données et faire des requête, view 
 //c'est ce qu'on voit sur le site et le controller va controller ttes les données.
 // require ('PHPMailer/PHPMailerAutoload.php');
