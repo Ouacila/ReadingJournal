@@ -14,6 +14,9 @@ require ('actions/books/myBooks_actions.php');
     <title>Reading journal</title>
 </head>
 <header>
+    <h1>Reading Journal</h1>
+    <br />
+    <h2>Journal de lecture</h2>
 </header>
 <body>
     <div class="LiensPagePerso">
@@ -26,31 +29,19 @@ require ('actions/books/myBooks_actions.php');
                 <a class="nav-link" href="./AllBooks.php">Tous les livres</a><br>
             </li>
             <li>
-                <a class="nav-link" href="./actions/users/tracker.php">Mon tracker de lectures finies</a><br>
-            </li>
-            <li>
-                <a class="nav-link" href="./actions/users/palDuMois.php">Ma Pile à lire du mois</a><br>
-            </li>
-            <li>
-                <a class="nav-link" href="./actions/users/LectureT.php">Lectures terminées</a><br>
+                <a class="nav-link" href="./actions/users/palDuMois.php">Ma Pile à lire</a><br>
             </li>
             <li>
                 <a class="nav-link" href="./actions/users/wishlist.php">Ma wishlist</a><br>
             </li>
             <li>
-                <a class="nav-link" href="./actions/users/bookhaul.php">Bookhaul du mois</a><br>
-            </li>
-            <li>
-                <a class="nav-link" href="./actions/users/lectureDuMois.php">Lectures du mois</a><br>
+                <a class="nav-link" href="./actions/users/bookhaul.php">Bookhaul</a><br>
             </li>
             <li>
                 <a class="nav-link" href="./actions/users/trackerChiffre.php">Tracker de livres lus</a><br>
             </li>
             <li>
                 <a class="nav-link" href="./actions/users/evolutionPal.php">Évolution de ma pile à lire</a><br>
-            </li>
-            <li>
-                <a class="nav-link" href="./actions/users/bestBook.php">Meilleures lectures de l'année</a><br>
             </li>
             <li>
                 <a class="nav-link" href="./actions/users/auteur.php">Auteur/trice préférée</a><br>
@@ -87,7 +78,7 @@ require ('actions/books/myBooks_actions.php');
                     <div class="buttons">
                         <a href="./edit_book.php?id_book=<?= $books['id_book']; ?>" class="btn btn-success">Modifier</a>
                         <a href="./oneBook.php?id_book=<?=$books['id_book']; ?>" class="btn btn-primary">Détails</a>
-                        <a href="actions/books/deleteBook_action.php?id_book=<?= $books['id_book']; ?>"" class="btn btn-danger">Supprimer</a>
+                        <a href="actions/books/deleteBook_action.php?id_book=<?= $books['id_book']; ?>" class="btn btn-danger">Supprimer</a>
                     </div>
                 </div>
             </div>
@@ -106,14 +97,24 @@ require ('actions/books/myBooks_actions.php');
         z-index:0;
     }
     header{
-            width: 100%;
-            height: 250px;
-            background-image: url('assets/header1.png');
-            background-size:100% 100%;
-            top:0%;
-            margin-bottom: 3%;
-            z-index: 1;
+            text-align: center;
+            padding: 3%;    
+            background-color: #7c6d51;
+
         }
+    h1{
+        font-size:3.5rem;
+        font-family: 'Caveat', cursive;
+        color: white;
+        text-shadow: black 1px 0 10px;
+        }
+    h2{
+        font-size:2.5rem;
+        font-family: 'Caveat', cursive;
+        color: white;
+        text-shadow: black 1px 0 10px;
+    }
+        
     .LiensPagePerso{
         margin-right: 5%;
         float:left;

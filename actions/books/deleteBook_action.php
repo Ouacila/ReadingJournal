@@ -15,8 +15,8 @@ if(isset($_GET['id_book']) && !empty($_GET['id_book'])){
 
     if($checkBookExists->rowCount() > 0){
 
-        $userInfo = $checkBookExists->fetch();
-        if($userInfo['id_profil'] == $_SESSION['id'] OR $_SESSION['id'] == 1){
+        $bookInfo = $checkBookExists->fetch();
+        if($bookInfo['id_profil'] == $_SESSION['id'] OR $_SESSION['id'] == 1){
 
             $deleteOneBook = $bdd->prepare('DELETE FROM Books WHERE id_book = ?');
             $deleteOneBook->execute(array($idBook));

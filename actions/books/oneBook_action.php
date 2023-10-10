@@ -20,6 +20,7 @@ if(isset($_GET['id_book']) && !empty($_GET['id_book'])){
             $book_resume = $bookInfo['resume'];
             $book_photo = $bookInfo['photo'];
             $book_date = $bookInfo['date_publication'];
+            $book_profil = $bookInfo['pseudo'];
 
             $book_resume = str_replace('<br />', ' ', $book_resume);
             //la fonction str_replace nous permet de remplacer les balises br par des espaces, 
