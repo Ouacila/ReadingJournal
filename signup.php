@@ -1,4 +1,6 @@
-<?php require('actions/users/signup_action.php'); ?>
+<?php 
+require('actions/users/signup_action.php');
+ ?>
 <!DOCTYPE html>
 <html lang="en">
     <?php include "includes/head.php"; ?>
@@ -22,14 +24,28 @@
                 <div class="form-group">
                     <input type="password" name="password" class="form-control" placeholder="Mot de passe" required="required" autocomplete="off">
                 </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block" name="validate">S'inscrire</button>
-                <br><br>
-                    <a href="connexion.php"><p>J'ai déjà un compte, je me connecte</p></a>
+                <!-- <div class="form-group">
+                    <button  type="submit" class="btn btn-primary btn-block" name="validate">S'inscrire</button>
+                <br><br> -->
+                <div id="paypal-button-container"></div>
+                <p id="result-message"></p>
+                <!-- Replace the "test" client-id value with your client-id -->
+                <script src="https://www.paypal.com/sdk/js?client-id=test&components=buttons&enable-funding=venmo&disable-funding=paylater,card" data-sdk-integration-source="integrationbuilder_sc"></script>
+                <a href="connexion.php"><p>J'ai déjà un compte, je me connecte</p></a>
                 </div>   
-            </form>
+            </form>  
         </div>
     </body>
+    <script>
+        paypal.Buttons({
+        style: {
+            layout: 'vertical',
+            color:  'blue',
+            shape:  'rect',
+            label:  'paypal'
+        }
+        }).render('#paypal-button-container');    
+    </script>
 </html>
 
 

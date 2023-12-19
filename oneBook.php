@@ -109,13 +109,15 @@
             display: flex;
             justify-content: center;
             padding: 3%;
+            background-color: #7c6d51;
+            margin-bottom: 5%;
         }
         h1{
-        font-size:3.5rem;
-        font-family: 'Caveat', cursive;
-        color: white;
-        text-shadow: black 1px 0 10px;
-        }
+            font-size:3.5rem;
+            font-family: 'Caveat', cursive;
+            color: white;
+            text-shadow: black 1px 0 10px;
+            }
         .content{
             width: 100%;
         }

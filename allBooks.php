@@ -64,45 +64,44 @@
         </div>
         <a href="indexPerso.php" class="retour">⬅️⬅️⬅️ Retour</a>
     </body>
-<html>
-<style>
-    body{
-        width: 100%;
-        margin: 0;
-        display: inline;
-        background-color: #E2D7C1;
-        z-index:0;
+    <style>
+        body{
+            width: 100%;
+            margin: 0;
+            display: inline;
+            background-color: #E2D7C1;
+            z-index:0;
+            }
+        header{
+            display: flex;
+            justify-content: center;
+            padding: 3%;
+            background-color: #7c6d51;
         }
-    header{
-        display: flex;
-        justify-content: center;
-        padding: 3%;
-        background-color: #7c6d51;
-    }
-    h1{
-        font-size:3.5rem;
-        font-family: 'Caveat', cursive;
-        color: white;
-        text-shadow: black 1px 0 10px;
+        h1{
+            font-size:3.5rem;
+            font-family: 'Caveat', cursive;
+            color: white;
+            text-shadow: black 1px 0 10px;
+            }
+        .row{
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
         }
-    .row{
-        margin-top: 5%;
-        display: flex;
-        justify-content: space-between;
-    }
-    .card{
-        margin: 2%;
-        padding: 2%;
-        border: #7c6d51 solid 2px;
-        border-radius: 5%;
-        background: white;
-    }
-    .card img{
-        margin-top: 5%;
-    }
-    a{
-        float:right;
-        padding: 5%;
-    }
-</style>
+        .card{
+            margin: 2%;
+            padding: 2%;
+            border: #7c6d51 solid 2px;
+            border-radius: 5%;
+            background: white;
+        }
+        .card img{
+            margin-top: 5%;
+        }
+        a{
+            float:right;
+            padding: 5%;
+        }
+    </style>
 </html>

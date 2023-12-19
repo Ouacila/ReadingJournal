@@ -29,30 +29,27 @@ require ('actions/books/myBooks_actions.php');
                 <a class="nav-link" href="./AllBooks.php">Tous les livres</a><br>
             </li>
             <li>
-                <a class="nav-link" href="./actions/users/palDuMois.php">Ma Pile à lire</a><br>
+                <a class="nav-link" href="./wishlist.php">Ma Pile à lire</a><br>
             </li>
             <li>
-                <a class="nav-link" href="./actions/users/wishlist.php">Ma wishlist</a><br>
+                <a class="nav-link" href="./pile_a_lire.php">Ma wishlist</a><br>
             </li>
             <li>
-                <a class="nav-link" href="./actions/users/bookhaul.php">Bookhaul</a><br>
+                <a class="nav-link" href="./trackerChiffre.php">Tracker de livres lus</a><br>
             </li>
             <li>
-                <a class="nav-link" href="./actions/users/trackerChiffre.php">Tracker de livres lus</a><br>
+                <a class="nav-link" href="./evolutionPal.php">Évolution de ma pile à lire</a><br>
             </li>
             <li>
-                <a class="nav-link" href="./actions/users/evolutionPal.php">Évolution de ma pile à lire</a><br>
-            </li>
-            <li>
-                <a class="nav-link" href="./actions/users/auteur.php">Auteur/trice préférée</a><br>
+                <a class="nav-link" href="./auteur.php">Auteur/trice préférée</a><br>
             </li>
             <li>
                 <a class="nav-link" href="actions/users/logout_action.php">Se déconnecter</a><br>
             </li>
         </ul>
     </div>
-
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <h2>Hello <?=$_SESSION['pseudo']?></h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">  
         <?php
             while($books = $getAllMyBooks->fetch()){     
         ?>
@@ -99,8 +96,7 @@ require ('actions/books/myBooks_actions.php');
     header{
             text-align: center;
             padding: 3%;    
-            background-color: #7c6d51;
-
+            background-color: #7c6d51;            
         }
     h1{
         font-size:3.5rem;
@@ -114,7 +110,9 @@ require ('actions/books/myBooks_actions.php');
         color: white;
         text-shadow: black 1px 0 10px;
     }
-        
+    h4{
+        margin-top: 5%;
+    } 
     .LiensPagePerso{
         margin-right: 5%;
         float:left;
